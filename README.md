@@ -2,7 +2,7 @@ NSUrlConnectionWithBlocks
 =========================
 Is a simple category for NSUrlConnection to add blocks for implementing asyncConnectionWithRequest.
 
-Forget about dealing with the delegate methods and use blocks.
+Forget about dealing with the delegate methods:
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)
 - (void)connection:(NSURLConnection *)_connection  didFailWithError:(NSError *)
@@ -25,8 +25,7 @@ downloadProgressBlock:downloadBlock];
 Provide your blocks, and call
 [connection start];
 
-//The following methods make it even easier.
-//  You don't even need to call start.
+The following class methods make it even easier. You don't even need to call start.
 
 + (NSURLConnection *)asyncConnectionWithRequest:(NSURLRequest *)request
                    completionBlock:(NSURLConnectionCompletionBlock)completionBlock
